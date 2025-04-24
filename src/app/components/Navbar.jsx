@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import Image from "next/image";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -29,7 +28,7 @@ const Navbar = () => {
   <div className="flex container lg:py-4 items-center justify-between mx-auto px-4 py-2">
     {/* Logo no canto esquerdo */}
     <Link href={"/"}>
-      <Image 
+      <img 
         src="/images/logo.png"
         alt="Logo"
         width={60}
