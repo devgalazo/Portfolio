@@ -40,10 +40,10 @@ const AchievementsSection = () => {
               <div className="mb-4">{tech.icon}</div>
 
               {/* Nome da tecnologia */}
-              <h2 className="text-white text-2xl font-bold">{tech.tech}</h2>
+              <h2 className="text-white text-lg md:text-2xl font-bold">{tech.tech}</h2>
 
               {/* Descrição da tecnologia */}
-              <p className="text-[#ADB7BE] text-base">{tech.description}</p>
+              <p className="text-[#ADB7BE] text-sm md:text-base">{tech.description}</p>
             </div>
           );
         })}
