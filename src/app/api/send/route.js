@@ -1,3 +1,5 @@
+"use client";
+
 export const runtime = 'edge';  // Configuração para Edge Runtime
 
 import { Resend } from 'resend';

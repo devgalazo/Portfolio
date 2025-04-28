@@ -3,4 +3,4 @@ compatibility_date = "2024-04-27"
 
 [build]
   command = "next build"
-  output_dir = ".next"
+  output_dir = ".vercel/output/static"
