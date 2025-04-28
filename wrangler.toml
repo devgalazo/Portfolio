@@ -7,6 +7,3 @@ compatibility_date = "2024-04-27"
 
 [build.upload]
   format = "service-worker"  # Isso é necessário para funcionar no Cloudflare Pages
-
-[env.production]
-  nodejs_compatibility = true  # Certifique-se de ativar essa compatibilidade
