@@ -6,5 +6,8 @@ compatibility_date = "2024-04-27"
   output_dir = ".vercel/output/static"
 
 [env.production]
- 
+  # Adicione variáveis de ambiente específicas de produção aqui, se necessário
+
 [env.preview]
+  # Adicione variáveis de ambiente específicas de preview aqui, se necessário
+
