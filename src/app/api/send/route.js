@@ -1,7 +1,6 @@
-export const runtime = 'edge';
-export const dynamic = "force-dynamic";
+export const runtime = 'edge';  // Configuração para Edge Runtime
 
-import { Resend } from "resend";
+import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
@@ -12,7 +11,7 @@ export async function POST(request) {
   try {
     const data = await resend.emails.send({
       from: fromEmail,
-      to: [fromEmail, fromEmail], // pode mudar isso se quiser
+      to: [fromEmail, fromEmail], // Altere para o destinatário correto
       subject,
       html: `
       <h2>Nova mensagem do site</h2>
@@ -25,12 +24,12 @@ export async function POST(request) {
 
     return new Response(JSON.stringify(data), {
       status: 200,
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     });
   } catch (error) {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500,
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     });
   }
 }
