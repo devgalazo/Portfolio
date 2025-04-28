@@ -1,21 +1,24 @@
+export const dynamic = "force-dynamic";
+
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
-export async function onRequestPost(context) {
-  const req = context.request;
-  const { email, subject, message } = await req.json();
+export async function POST(request) {
+  const { email, subject, message } = await request.json();
 
   try {
     const data = await resend.emails.send({
       from: fromEmail,
-      to: [fromEmail, email],
+      to: [fromEmail, fromEmail], // pode mudar isso se quiser
       subject,
       html: `
-        <h1>${subject}</h1>
-        <p>Obrigado por entrar em contato!</p>
-        <p>${message}</p>
+      <h2>Nova mensagem do site</h2>
+      <p><strong>De:</strong> ${email}</p>
+      <p><strong>Assunto:</strong> ${subject}</p>
+      <p><strong>Mensagem:</strong></p>
+      <p>${message}</p>
       `,
     });
 

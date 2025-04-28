@@ -6,21 +6,6 @@ import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
-    id: 1,
-    title: "Thynk Travel - Agência de viagens",
-    description:(
-    <div
-    dangerouslySetInnerHTML={{
-      __html: "O projeto realiza a busca dinâmica de voôs, sistema de cadastramento proporcionando uma experiência fluida em diferentes dispositivos. <br/><br>Tecnologias: HTML, Tailwind, JavaScript, Node.js, Express, MySQL, API Google, Github e Amadeus.",
-    }}
-    />
-    ),
-    image: "/images/projects/projeto-2.png",
-    tag: ["Projetos", "Web"],
-    gitUrl: "https://github.com/devgalazo/ThynkTravel",
-    previewUrl: "https://thynktravel.vercel.app",
-  },
-  {
     id: 2,
     title: "Dev Burguer - Hamburgueria",
     description:( 
@@ -34,6 +19,21 @@ const projectsData = [
     tag: ["Projetos", "Web"],
     gitUrl: "https://github.com/devgalazo/projetocardapio",
     previewUrl: "https://projetocardapio-xcbf.vercel.app",
+  },
+  {
+    id: 1,
+    title: "Thynk Travel - Agência de viagens 🔵 Em desenvolvimento",
+    description:(
+    <div
+    dangerouslySetInnerHTML={{
+      __html: "O projeto realiza a busca dinâmica de voôs, sistema de cadastramento proporcionando uma experiência fluida em diferentes dispositivos. <br/><br>Tecnologias: HTML, Tailwind, JavaScript, Node.js, Express, MySQL, API Google, Github e Amadeus.",
+    }}
+    />
+    ),
+    image: "/images/projects/projeto-2.png",
+    tag: ["Projetos", "Web"],
+    gitUrl: "https://github.com/devgalazo/ThynkTravel",
+    previewUrl: "https://thynktravel.vercel.app",
   },
   {
     id: 3,
