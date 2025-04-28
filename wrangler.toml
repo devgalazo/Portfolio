@@ -2,4 +2,5 @@ name = "meu-portfolio"
 compatibility_date = "2024-04-27"
 
 [build]
-command = "npm run build"  # ou outro comando, dependendo do seu projeto
+  command = "next build"
+  output_dir = ".next"
