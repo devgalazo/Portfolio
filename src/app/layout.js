@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
+// app/layout.js
 export const metadata = {
   metadataBase: new URL('https://matheusgalazo.com.br'),
   title: 'Matheus | Portfólio de Desenvolvimento Web',
@@ -29,14 +30,16 @@ export const metadata = {
     locale: 'pt_BR',
     type: 'website',
   },
-}
+};
 
-
-
-export default function RootLayout({ children }) {
+export default function Layout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <head>
+        {/* O Next.js irá injetar os metadados automaticamente */}
+      </head>
+      <body>{children}</body>
     </html>
-  )
+  );
 }
+
