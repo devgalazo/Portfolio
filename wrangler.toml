@@ -6,7 +6,5 @@ compatibility_date = "2024-04-27"
   output_dir = ".vercel/output/static"
 
 [env.production]
-  nodejs_compatibility = true  # Certifique-se de ativar essa compatibilidade
-
+ 
 [env.preview]
-  nodejs_compatibility = true  # Habilite também para preview
