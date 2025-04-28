@@ -9,32 +9,33 @@ export const metadata = {
   description: 'Conheça os projetos de Matheus: desenvolvimento web com HTML, CSS, JavaScript, Node.js, MySQL e muito mais.',
   keywords: 'portfólio, desenvolvedor web, HTML, CSS, JavaScript, Node.js, MySQL, Tailwind, React, projetos de TI',
   author: 'Matheus',
-  themeColor: '#60a5fa', // Um roxo bonito (você pode trocar para outra cor se quiser)
+  themeColor: '#60a5fa',
+  icons: {
+    icon: '/favicon.ico', // <-- Agora está no lugar certo
+  },
   openGraph: {
     title: 'Matheus | Portfólio de Desenvolvimento Web',
     description: 'Projetos de desenvolvimento web criativos e modernos, utilizando as melhores tecnologias do mercado.',
-    url: 'https://matheusgalazo.com.br', // Troque pelo seu domínio real
+    url: 'https://matheusgalazo.com.br',
     siteName: 'Galazo Dev',
     images: [
       {
-        url: '/images/tecnology-background.jpg', // Uma imagem de capa (pode criar no Figma ou usar uma imagem de fundo bonita)
+        url: '/images/tecnology-background.jpg',
         width: 1200,
         height: 630,
         alt: 'Matheus Galazo - Portfólio de Desenvolvimento Web',
       },
     ],
-    icons: {
-      icon: 'public/favicon.ico',
-    },
     locale: 'pt_BR',
     type: 'website',
   },
 }
 
 
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={inter.className}>{children}</body>
     </html>
   )
